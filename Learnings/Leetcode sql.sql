@@ -111,4 +111,12 @@ immediately go to min no brainer;
 if they ask something like unique then you go select teacher_id,subject_id from teacher group by subject_id,teacher_id
 groupibng by brother 
 select t.teacher_id,count(t.subject_id) as cnt
-from (select teacher_id,subject_id from teacher group by subject_id,teacher_id)as t group by teacher_id;
+from (select teacher_id,subject_id from teacher group by subject_id,teacher_id)as t group by teacher_id; 
+
+use having bro
+select count(student) as cnt,class from courses group by class having cnt>5;
+
+in cases where you have to go where there are this number of thigns in a colooumn use having
+select class from courses group by class having count(student)>5;
+
+having count(distinct product_key)=(select count(distinct product_key) from product);
