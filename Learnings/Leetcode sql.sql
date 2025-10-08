@@ -120,3 +120,8 @@ in cases where you have to go where there are this number of thigns in a colooum
 select class from courses group by class having count(student)>5;
 
 having count(distinct product_key)=(select count(distinct product_key) from product);
+
+union all is pretty damn good
+select employee_id from employee group by employee_id having sum(case when primary_flag='N' then 0 else 1 end)=0) 
+this remember it dawg when you want to see if it doesnt have anything i want. put iit zero everything else to 1
+0+0 is always 0. anything esle differnt;
