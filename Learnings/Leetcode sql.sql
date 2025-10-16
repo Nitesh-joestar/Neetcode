@@ -108,6 +108,7 @@ if they say first of something immediately go min aight
 select product_id,year as first_year,quantity,price from sales where(product_id,year) in (select product_id,min(year) as year from sales group by product_id)
 immediately go to min no brainer;
 
+
 if they ask something like unique then you go select teacher_id,subject_id from teacher group by subject_id,teacher_id
 groupibng by brother 
 select t.teacher_id,count(t.subject_id) as cnt
@@ -125,3 +126,5 @@ union all is pretty damn good
 select employee_id from employee group by employee_id having sum(case when primary_flag='N' then 0 else 1 end)=0) 
 this remember it dawg when you want to see if it doesnt have anything i want. put iit zero everything else to 1
 0+0 is always 0. anything esle differnt;
+
+select x,y,z,(case when x+y>z and x+z>y and z+x>y then 'Yes' else 'No' end) as triangle from triangle 
