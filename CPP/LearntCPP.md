@@ -37,3 +37,45 @@ cout<<LONG_LONG_MAX<<' '<<LONG_LONG_MIN<<'\n';
 cout<<CHAR_MAX<<' '<<CHAR_MIN<<'\n';
 cout<<ULONG_LONG_MAX<<' '<<UINT_MAX<<'\n';`
 
+Yes, that's exactly right. To check if a number n is prime, you only need to test for 
+divisors up to its square root, root(n).
+even for divisors too dawgg
+mmh you dont say
+
+std::pow(n,3); how to do power of n to the power of 3
+
+`int print(int n) {
+if (n>=0) {
+cout<<"printing "<<n<<" times"<<'\n';
+print(n-1);
+}
+}`
+this is better than keeping print(n-1) outside eh
+
+when returning return 0 means success
+anything non zeero means failure
+you can also return values like 1 which can be used for calculation
+
+you go std::unordered_map<int,int> for hashmap
+freq[number] by default if its unwritten its zero
+
+`vector<int> shift_array(std::vector<int> num) {
+const int temp{num[0]};
+for (int i{0};i<num.size()-1;++i) {
+num[i]=num[i+1];
+}
+num[num.size()-1]=temp;
+return num;
+}
+` you are passing by value and not reference so its slow
+
+B[i] == A[(i+x) % A.length] to chcek if an array is rotated and sorted hmm
+this logic it checks the condition. every num[i] is less than num[i+1] and num[last]<num[first]
+and sorted unrotated end and first meet once. only 1
+
+in xor same numbers are equal whereas different numbers its one
+
+0 ^ 2 ^ 1 ^ 2 ^ 3 ^ 1
+= 0 ^ (2 ^ 2) ^ (1 ^ 1) ^ 3    ← Commutative & Associative
+cool xor property
+this is how single number problem is solved
