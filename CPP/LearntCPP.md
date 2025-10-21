@@ -79,3 +79,28 @@ in xor same numbers are equal whereas different numbers its one
 = 0 ^ (2 ^ 2) ^ (1 ^ 1) ^ 3    ← Commutative & Associative
 cool xor property
 this is how single number problem is solved
+
+```c++
+//my first real dp problem solved so proud, the use of std::min saves space and is better readability
+//dp just a lot of memoization bruh. this is a bottom up appraoch i belive
+class Solution {
+public:
+    int minCostClimbingStairs(vector<int>& cost) {
+        const int n = cost.size();
+        int buffer{};
+        std::vector<int> memo(n);
+        memo[n - 1] = cost[n - 1];
+        memo[n - 2] = cost[n - 2];
+
+        for (int i{n - 3}; i > -1; --i) {
+            memo[i]=cost[i]+std::min(memo[i+1],memo[i+2]);
+        }
+        
+        return std::min(memo[0],memo[1]);
+    }
+};
+```
+sometimes you can just use the given table as memoization
+also u can use a 1d array if u got a 2d array
+
+for a 2d matrix. you are calc from the bottom right in a single tape manner just store em in a array 1d dawg

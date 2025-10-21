@@ -8,5 +8,5 @@ include_directories(CPP)
 add_executable(Neetcode
         CPP/Demo.cpp
         CPP/Demo.h
-        CPP/LinkedList.cpp
-        CPP/LinkedList.h)
+        CPP/SinglyLinkedList/LinkedList.cpp
+        CPP/SinglyLinkedList/LinkedList.h)
